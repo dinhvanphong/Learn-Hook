@@ -1,0 +1,258 @@
+.wrap{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-left: 10px;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid #0000001a;
+  min-height: 700px;
+}
+
+/* -----------------------TABLE------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr td:nth-child(1) {
+  text-align: center;
+}
+tr td:nth-child(2) {
+  font-size: large;
+}
+thead tr th:nth-child(1){
+  text-align: center;
+  width: 6%;
+}
+thead tr th:nth-child(2){
+  text-align: center;
+  width: 76%;
+}
+thead tr th:nth-child(3){
+  text-align: center;
+  width: 20%;
+}
+
+tbody tr:hover {
+  background-color: #fbfbfb;
+}
+
+tbody tr td:last-child {
+  font-weight: 600;
+}
+
+tbody p {
+  text-align: center;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+/* ------------------CheckBoxPC----------------- */
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  padding: 3px 0;
+  user-select: none;
+}
+
+.checkbox input{
+  margin: 0;
+}
+
+.checkbox label {
+  padding-left: 5px;
+  color: #727272;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.checkbox label:hover {
+  color: #0083c2;
+}
+
+.checkBoxIsDone {
+  color: #0083c2;
+}
+
+/* ----------------------textarea------------------- */
+.textarea {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+
+}
+
+.textarea label {
+  color: #0083c2;
+}
+
+.textarea textarea{
+  padding: 10px;
+  border-radius: 8px;
+}
+
+textarea:focus {
+  outline: 1px solid #0083c2;
+}
+
+.button {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button button {
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 20px;
+  color: white;
+  background-color: rgb(0, 131, 194, 0.7);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button button:hover {
+  background-color: #0083c2;
+}
+
+/* -------------------------------------MOBILE------------------------------------------- */
+.container {
+  border: 2px solid #b3b3b3;
+  border-top-right-radius: 10px ;
+  border-top-left-radius: 10px ;
+  overflow: hidden;
+  color: #727272;
+}
+
+.activity {
+  border-bottom: 2px solid #a8a8a8;
+  transition: all 0.1s;
+  min-height: 40px;
+}
+
+.activity.active {
+  min-height: 60px;
+}
+
+.activity:last-child {
+  border: none;
+}
+
+.activity.active .option {
+  display: flex;
+}
+
+.activity.active .iconDown {
+  rotate: 180deg;
+}
+
+.activity p{
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  cursor: pointer;
+  user-select: none;
+
+}
+.activity .nameActivity{
+  padding: 10px;
+  background-color: #fbfbfb;
+}
+
+.iconDown {
+  font-size: larger;
+  color: #0083c2;
+  transition: all 0.3s;
+}
+
+
+.option {
+  padding: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #a8a8a8;
+  gap: 20px;
+  display: none;
+}
+
+.option p{
+  /* color: #0083c2; */
+  text-align: center;
+}
+
+.thich{
+  color: #0083c2;
+}
+
+.kThich {
+  color: red;
+}
+
+.checkboxMb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkboxMb input{
+  margin: 0;
+}
+
+.checkboxMb label{
+  padding-left: 5px;
+}
+
+@media screen and (max-width: 64.0625em) {
+  .wrap {
+    border: none;
+    margin-left: 0;
+    width: calc(100% - 20px);
+    gap: 30px;
+    min-height: 500px;
+    margin-top: 5px;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .button button {
+    border-radius: 3px;
+    padding: 12px 45px;
+    background-color: #0083c2;
+  }
+
+  .textarea {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+  }
+
+  .textarea label{
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .textarea textarea{
+    padding: 10px;
+  }
+}
